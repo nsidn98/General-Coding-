@@ -67,6 +67,7 @@ hello=tf.constant('Hello,Tensorflow')
 sess=tf.Session()
 print(sess.run(hello))
 ~~~
+
 * You should get some information on the terminal about your GPU like this:
 ![Output1](https://github.com/nsidn98/General-Coding-/blob/master/images/Capture.PNG)
 
@@ -77,3 +78,8 @@ print(sess.run(hello))
 ![Output2](https://github.com/nsidn98/General-Coding-/blob/master/images/Capture2.PNG)
 
 
+
+## Common Errors:
+1:If you get this error:`ImportError: Could not find 'cudart64_90.dll'. TensorFlow requires that this DLL be installed in a directory that is named in your %PATH% environment variable. Download and install CUDA 9.0 from this URL: https://developer.nvidia.com/cuda-toolkit` Then check whether the file `cudart64_90.dll` is in `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin` and you have entered the path properly in the `environment variables`.
+
+2:`PermissionError: [WinError 5] Access is denied`: Check if you are running the prompt as an **Admin**

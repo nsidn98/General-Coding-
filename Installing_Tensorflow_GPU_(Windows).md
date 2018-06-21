@@ -20,12 +20,16 @@
 * Go to `Start` and search for `Environment Variables`.
 * Click on `edit environment variables`.
 * Click on `Path` and then click on `edit`.
+
+![Edit Variables](https://github.com/nsidn98/General-Coding-/blob/master/images/Capture1.PNG)
+
 * Then add the following paths:
   - C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin
   - C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp
   - C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\extras\CUPTI\libx64
   
 If the `edit variables` line is just a single line then add `;` at the end of each of the 3 paths above and type them in a single line.
+
 **NOTE:** Check the version number before adding the path.If you version is 9.2 please change it in the above paths by replacing the `v9.0` with `v9.2`
 
 ## Download CuDNN:
@@ -49,14 +53,16 @@ If the `edit variables` line is just a single line then add `;` at the end of ea
 
 ## Install Tensorflow:
 * Open an Anaconda Prompt window and type the following command.
+
   `pip install --ignore-installed --upgrade tensorflow-gpu`
 * If you are under a firewall,you may need to proxy.
+
   `pip install --ignore-installed --upgrade tensorflow-gpu --proxy <your proxy name>`
 
 ## Test your Installation:
 * Open another Anaconda prompt shell.
 * Type `python`.
-* You may want to run the prompt as an Admin if you are getting `PermissionError: [WinError 5] Access is denied` as an error.
+* You may want to run the prompt as an **Admin** if you are getting `PermissionError: [WinError 5] Access is denied` as an error.
 ~~~
 import tensorflow as tf
 hello=tf.constant('Hello,Tensorflow')
@@ -64,5 +70,11 @@ sess=tf.Session()
 print(sess.run(hello))
 ~~~
 * You should get some information on the terminal about your GPU like this:
+![Output1](https://github.com/nsidn98/General-Coding-/blob/master/images/Capture.PNG)
 
 * The output should be `Hello,Tensorflow`
+
+* If you type `sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))`, you should get something like this:
+![Output2](https://github.com/nsidn98/General-Coding-/blob/master/images/Capture2.PNG)
+
+

@@ -73,6 +73,7 @@ print(sess.run(hello))
 * The output should be `Hello,Tensorflow`
 
 * If you type `sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))`, you should get something like this:
+
 ![Output2](https://github.com/nsidn98/General-Coding-/blob/master/images/Capture2.PNG)
 
 

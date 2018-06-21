@@ -21,8 +21,6 @@
 * Click on `edit environment variables`.
 * Click on `Path` and then click on `edit`.
 
-![Edit Variables](https://github.com/nsidn98/General-Coding-/blob/master/images/Capture1.PNG)
-
 * Then add the following paths:
   - C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin
   - C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp

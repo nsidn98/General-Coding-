@@ -37,7 +37,7 @@ If the `edit variables` line is just a single line then add `;` at the end of ea
 * For eg: I extracted it at `C:\cudnn-9.0-windows7-x64-v7.1`
 * Go to that folder->cuda->bin and copy the address(filepath) of that file.
   * for example:`C:\cudnn-9.0-windows7-x64-v7.1\cuda\bin`
-* Add the path to the `environment variables as done before.
+* Add the path to the `environment variables` as done before.
 
 ## Update the GPU Driver:
 * First check for the GPU in your system.

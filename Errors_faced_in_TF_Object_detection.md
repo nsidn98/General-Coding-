@@ -18,3 +18,12 @@
   3. Check for the `tfrecord_generator.py` and the `.csv` file before running it as all the classes have to be covered.
   
   4. Check for the `.config` file if the `number of classes` has been set-up properly and the filepaths to the `labelmap.pbtxt`,'training.ckpt' and the training and testing files.
+  
+  5. `CUDNN_STATUS_NOT_INITIALIZED`:Go to trainer.py and go to the following line:
+`session_config = tf.ConfigProto(allow_soft_placement=True, log_device_placement=False)`
+replace it with:
+`gpu_options = tf.GPUOptions(allow_growth=True) session_config = tf.ConfigProto(allow_soft_placement=True, log_device_placement=False, gpu_options=gpu_options)`
+
+Or check if the versions of CUDA and CuDNN are supported by TensorFlow.
+
+
